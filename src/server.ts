@@ -6,5 +6,5 @@ const app = express();
 const port = 3333;
 
 app.use(express.json());
-app.use("/categories", categorieRoutes);
+app.use(categorieRoutes);
 app.listen(port, () => console.log(`listening on port: localhost:${port}`));
