@@ -1,7 +1,7 @@
 /* eslint-disable import-helpers/order-imports */
 /* eslint-disable import/no-extraneous-dependencies */
 import { Router } from "express";
-import { Category } from "../model/Categoriy";
+import { Category } from "../models/Categoriy";
 
 const categorieRoutes = Router();
 const categories: Category[] = [];
