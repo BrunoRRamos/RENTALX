@@ -1,14 +1,19 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { Router } from "express";
+import { v4 as uuidv4 } from "uuid";
 
 const categorieRoutes = Router();
 const categories = [];
 
-categorieRoutes.post("/categories", (req, res) => {
+categorieRoutes.post("/", (req, res) => {
     const { name, description } = req.body;
-    categories.push({
+    const category = {
         name,
         description,
-    });
+        id: uuidv4(),
+    };
+
+    categories.push(category);
 
     return res.status(201).send();
 });
